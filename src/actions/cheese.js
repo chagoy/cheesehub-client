@@ -29,7 +29,7 @@ export const fetchCheeses = () => {
 	return dispatch => {
 		console.log('hello i got called')
 		dispatch(fetchCheeseRequest());
-		fetch(`${API_BASE_URL}/api/cheeses`)
+		fetch(`${API_BASE_URL}/cheeses`)
 		.then(response => response.json())
 		.then(cheeses => dispatch(fetchCheeseSuccess(cheeses)))
 		.catch(error => dispatch(fetchCheeseError()))
